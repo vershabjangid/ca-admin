@@ -1,18 +1,21 @@
 .login{
   width: 100%;
   height: 100vh;
-   background: linear-gradient(120deg,#bbbbe2,#c4e1d3,#ddd);
+ background: linear-gradient(120deg,#bbbbe2,#c4e1d3,#ddd);
+ overflow: hidden;
 }
 
 .main_login {
-  width: 80%;
+  width: 90%;
   height: 90%;
   background:#edf8f5 ;
+  position: relative;
+  top: 40px;
 }
 .icon_password{
     cursor: pointer;
     position: absolute;
-    right: 20%;
+    right: 5%;
     top: 40%;
 }
 .password_forget{
@@ -20,5 +23,12 @@
 }
 .submit_login{
   background: black !important;
-  width: 80%;
+  width: 100%;
+}
+.login_form input {
+  border: 2px  solid black !important;
+}
+.login_form input::placeholder{
+  font-size: 15px;
+  font-weight:500;
 }
