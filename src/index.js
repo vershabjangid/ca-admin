@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 import { Login } from './pages/Login';
+import { Dashboard } from './pages/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,6 +16,10 @@ let router = createBrowserRouter([
   {
     path:"/",
     element:<Login/>
+  },
+  {
+    path:"/dashboard",
+    element:<Dashboard/>
   }
 
 ])
