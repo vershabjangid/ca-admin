@@ -1,34 +1,353 @@
-.login{
+.login {
   width: 100%;
   height: 100vh;
- background: linear-gradient(120deg,#bbbbe2,#c4e1d3,#ddd);
- overflow: hidden;
+  background: linear-gradient(120deg, #bbbbe2, #c4e1d3, #ddd);
+  overflow: hidden;
 }
 
 .main_login {
   width: 90%;
   height: 90%;
-  background:#edf8f5 ;
+  background: #edf8f5;
   position: relative;
   top: 40px;
 }
-.icon_password{
-    cursor: pointer;
-    position: absolute;
-    right: 5%;
-    top: 40%;
+
+.icon_password {
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 40%;
 }
-.password_forget{
+
+.password_forget {
   cursor: pointer;
 }
-.submit_login{
+
+.submit_login {
   background: black !important;
   width: 100%;
 }
+
 .login_form input {
-  border: 2px  solid black !important;
+  border: 2px solid black !important;
 }
-.login_form input::placeholder{
+
+.login_form input::placeholder {
   font-size: 15px;
-  font-weight:500;
+  font-weight: 500;
+}
+
+/* Login page  css end   */
+
+
+body {
+  background-color: #1d2634 !important;
+  color: #9e9ea4 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon_header {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
+}
+
+.icon,
+.icon_header {
+  margin-right: 5px;
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: 100vh;
+}
+
+
+/* header css start */
+
+
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* header css end  */
+
+
+/* Sidebar  */
+#sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #263043;
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title>span {
+  display: none;
+}
+
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-list-item {
+  padding: 20px 20px 20px 20px;
+  font-size: 18px;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidebar-list-item>a {
+  text-decoration: none;
+  color: #9e9ea4;
+}
+
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  /*
+    we want the z-index of the sidebar higher so that
+    the charts are not showing over the sidebar 
+    on small screens
+  */
+  z-index: 12 !important;
+}
+
+.dropdown-toggle {
+  color: #9e9ea4 !important;
+}
+
+.text_color {
+  color: #9e9ea4 !important;
+}
+
+/* End Sidebar  */
+
+/* main start  */
+
+.main-container {
+  grid-area: main;
+  padding: 20px 20px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.card:first-child {
+  background-color: #2962ff;
+}
+
+.card:nth-child(2) {
+  background-color: #ff6d00;
+}
+
+.card:nth-child(3) {
+  background-color: #2e7d32;
+}
+
+.card:nth-child(4) {
+  background-color: #d50000;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-inner>.card_icon {
+  font-size: 25px;
+}
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 60px;
+  height: 300px;
+}
+
+/* End Main  */
+
+/* add Employee css start */
+
+.input_common {
+  background-color: #1d2634 !important;
+  color: #bbbbe2;
+  border: 1px solid white !important;
+  width: 90% !important;
+}
+
+.submit_btn {
+  width: 96%;
+  background-color: #263043 !important;
+  color: #bbbbe2 !important;
+}
+
+.text_discription {
+  width: 96% !important;
+  height: 200px !important;
+  padding: 15px;
+  line-height: 25px;
+  font-size: 19px;
+}
+
+/* add Employee css  end*/
+
+/* view Employee css start */
+.modal-content {
+  width: 800px !important;
+  height: 500px !important;
+}
+
+.main_detail_row {
+  height: 73vh !important;
+  overflow: auto;
+  white-space: nowrap;
+}
+.email_box{
+  width: 350px !important;
+  text-align: center;
+  padding: 0px 15px;
+}
+.main_hading_row {
+  width: 1500px !important;
+  display: flex;
+  flex-wrap: nowrap !important;
+}
+
+.view_details_colm {
+  width: 250px !important;
+}
+.profile_view{
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* view Employee css end  */
+
+@media screen and (max-width: 992px) {
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      'header'
+      'main';
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline;
+    cursor: pointer;
+  }
+
+  .sidebar-title>span {
+    display: inline;
+  }
+
+}
+
+/* Small <= 768px */
+
+@media screen and (max-width: 768px) {
+  .main-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .charts {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+/* Extra Small <= 576px */
+
+@media screen and (max-width: 576px) {
+  .hedaer-left {
+    display: none;
+  }
+
+  .modal-content {
+    width: 100% !important;
+  }
+
+  .input_common {
+    width: 100% !important;
+  }
 }

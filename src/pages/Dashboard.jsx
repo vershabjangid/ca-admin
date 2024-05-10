@@ -1,7 +1,22 @@
-import React from 'react'
+import { useState } from 'react';
+import Header from '../common/Header';
+import Sidebar from '../common/Sidebar';
+import Home from '../components/Home';
+function App() {
+  
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
-export function Dashboard() {
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
+
   return (
-    <div>Dashboard</div>
+    <div className='grid-container'>
+      <Header OpenSidebar={OpenSidebar}/>
+      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+      <Home/>
+    </div>
   )
 }
+
+export default App

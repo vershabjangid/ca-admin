@@ -2,6 +2,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export function Login() {
 
@@ -67,11 +68,11 @@ export function Login() {
                     Forget Password ?
                   </p>
                 </div>
-                <div className="">
+                <Link to={'/dashboard'}>
                   <button className="btn text-light fw-bold fs-4 p-lg-3 p-2 text-center submit_login">
                     Submit
                   </button>
-                </div>
+                </Link>
               </form>
             </div>
           </Col>
